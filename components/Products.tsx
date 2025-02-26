@@ -57,7 +57,7 @@ const Products = ({ products }: ProductsProps) => {
                                         className="mt-auto bg-lime-700 text-white py-2 rounded-lg hover:bg-lime-800 transition"
                                         onClick={() => dispatch(addToCart(productitem))}
                                     >
-                                        Add to Cart
+                                        Add to Carts
                                     </button>
                                 )}
                             </div>

@@ -52,7 +52,7 @@ const Login = () => {
           </form>
         </CardContent>
         <CardFooter className="text-sm text-gray-500 flex justify-center">
-          Don't have an account?{" "}
+          Donot have an account?{" "}
           <span className="text-green-600 cursor-pointer ml-1 hover:underline">
             Sign Up
           </span>

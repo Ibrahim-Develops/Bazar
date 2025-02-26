@@ -40,8 +40,6 @@ const DisplayProducts = ({ product }: DisplayProductsProps) => {
           <button className="mt-4 w-full  text-white py-2 rounded-lg bg-green-700 transition">
             Buy Now
           </button>
-
-          <button className="mt-5 bg-teal-600 py-2 px-3 rounded text-white">Server Action</button>
         </div>
       </div>
     </div>
