@@ -31,10 +31,10 @@ const Asidebar = () => {
                 <FaTag className=''/>
                 <span>Products</span>
             </Link>
-            <div onClick={()=>setSelect("Customers")} className={`text-white rounded-lg flex cursor-pointer py-3 px-3 gap-5 text-lg items-center ${ select === "Customers" ? "bg-lime-700" : ""}`}>
+            <Link href="/dashboard/users" onClick={()=>setSelect("Customers")} className={`text-white rounded-lg flex cursor-pointer py-3 px-3 gap-5 text-lg items-center ${ select === "Customers" ? "bg-lime-700" : ""}`}>
                 <GoPeople className=''/>
                 <span>Customers</span>
-            </div>
+            </Link>
         </div>
     </div>
   )
