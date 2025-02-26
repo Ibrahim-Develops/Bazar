@@ -1,7 +1,7 @@
 "use server"
 
-export async function FetchUser() {
+export async function FetchUsers() {
     const res = await fetch('https://dummyjson.com/users')
     const users = await res.json()
-    return users
+    return users.users
 }
