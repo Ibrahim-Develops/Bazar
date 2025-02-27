@@ -1,6 +1,6 @@
 "use client"
 
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Input } from "./ui/Input";
 import { Textarea } from "./ui/textarea";
 import { toast, ToastContainer } from 'react-toastify';
@@ -27,7 +27,7 @@ const Form = () => {
 
     return (
         <div className="h-[88vh] overflow-x-hidden">
-            <div onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto p-4 border rounded-lg shadow-md mt-16">
+            <div onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto p-4 py-12 border rounded-lg shadow-md mt-16">
                 <h2 className="text-xl font-semibold mb-4">Contact Form</h2>
                 <form className="space-y-4">
                     <div>
@@ -69,17 +69,16 @@ const Form = () => {
                     <button type="submit" disabled={isSubmitting} className="w-full bg-teal-600 text-white p-2 rounded hover:bg-teal-700">Submit</button>
                 </form>
             </div>
-            {data2.map((data2, i) => (
-                <div className="flex flex-col mx-10">
-                    <div key={i} className="p-4 border w-[300px] h-[300px] border-gray-300 rounded-lg shadow-md bg-white max-w-md mx-auto mt-4 space-y-2">
-                        <p className="text-lg font-semibold text-gray-700">{data2?.name}</p>
-                        <p className="text-gray-600">{data2?.firstname || data2?.secondname}</p>
-                        <p className="text-blue-600 font-medium">{data2?.email}</p>
-                        <p className="text-gray-500 italic">{data2?.message}</p>
+            {data2.map((data, i) => (
+                <div key={i} className="flex flex-col">
+                    <div className="p-4 border w-[300px] h-[300px] border-gray-300 rounded-lg shadow-md bg-white max-w-md mx-auto mt-4 space-y-2">
+                        <p className="text-lg font-semibold text-gray-700">{data?.name}</p>
+                        <p className="text-gray-600">{data?.firstname || data?.secondname}</p>
+                        <p className="text-blue-600 font-medium">{data?.email}</p>
+                        <p className="text-gray-500 italic">{data?.message}</p>
                     </div>
                 </div>
             ))}
-
             <ToastContainer />
         </div>
     )

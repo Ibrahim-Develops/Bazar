@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAllUsers } from "@/slices/cart/usersslice";
 import { AppDispatch, RootState } from "@/lib/store/store";
+import Image from "next/image";
 
 const Users = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -19,7 +20,7 @@ const Users = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {userState.data?.map((user) => (
                     <div key={user.id} className="bg-white shadow-md rounded-lg p-5 flex flex-col items-center" >
-                        <img src={user.image} alt={user.firstName} className="w-24 h-24 rounded-full border-2 border-gray-300" />
+                        <Image src={user.image} alt={user.firstName} className="w-24 h-24 rounded-full border-2 border-gray-300" />
                         <h3 className="text-xl font-semibold mt-3 text-gray-800">{user.firstName} {user.lastName}</h3>
                         <p className="text-sm text-gray-600">Age: {user.age} | {user.gender}</p>
                         <p className="text-sm text-gray-500">Username: {user.username}</p>
