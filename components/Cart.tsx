@@ -8,7 +8,6 @@ import { decreasequantity, increasequantity, removefromcart } from "@/slices/car
 const Cart = () => {
     const cart = useSelector((state: RootState) => state.cart);
     const dispatch = useDispatch()
-    console.log(cart);
 
     return (
         <div className="p-6 gap-6 h-[88vh] overflow-x-hidden ">

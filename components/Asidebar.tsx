@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { LuListTodo } from "react-icons/lu";
 import { FaTag } from "react-icons/fa6";
 import { GoPeople } from "react-icons/go";
+import { GiPlatform } from "react-icons/gi";
 import Link from 'next/link';
 
 const Asidebar = () => {
@@ -34,6 +35,10 @@ const Asidebar = () => {
             <Link href="/dashboard/users" onClick={()=>setSelect("Customers")} className={`justify-center md:justify-center md:items-center text-white rounded-lg flex cursor-pointer py-3 px-3 gap-5 text-lg items-center ${ select === "Customers" ? "bg-lime-700 scale-105" : ""}`}>
                 <GoPeople className='text-sm sm:text-xl xl:text-2xl'/>
                 <span className='hidden xl:block'>Customers</span>
+            </Link>
+            <Link href="/dashboard/form" onClick={()=>setSelect("Form")} className={`justify-center md:justify-center md:items-center text-white rounded-lg flex cursor-pointer py-3 px-3 gap-5 text-lg items-center ${ select === "Form" ? "bg-lime-700 scale-105" : ""}`}>
+                <GiPlatform className='text-sm sm:text-xl xl:text-2xl'/>
+                <span className='hidden xl:block'>Form</span>
             </Link>
         </div>
     </div>
