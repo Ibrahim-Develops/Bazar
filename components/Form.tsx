@@ -69,6 +69,7 @@ const Form = () => {
                     <button type="submit" disabled={isSubmitting} className="w-full bg-teal-600 text-white p-2 rounded hover:bg-teal-700">Submit</button>
                 </form>
             </div>
+            
             {data2.map((data, i) => (
                 <div key={i} className="flex flex-col">
                     <div className="p-4 border w-[300px] h-[300px] border-gray-300 rounded-lg shadow-md bg-white max-w-md mx-auto mt-4 space-y-2">
